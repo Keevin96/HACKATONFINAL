@@ -1,0 +1,105 @@
+{
+	"info": {
+	  "name": "sv73354567 Collection",
+	  "description": "Colección adaptada para el proyecto reestructurado",
+	  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+	  {
+		"name": "Auth",
+		"item": [
+		  {
+			"name": "Login",
+			"request": {
+			  "method": "POST",
+			  "header": [],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n    \"username\": \"usuario_modificado\",\n    \"password\": \"contrasena_modificada\"\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:3000/api/auth/signin",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "3000",
+				"path": ["api", "auth", "signin"]
+			  }
+			},
+			"response": []
+		  }
+		]
+	  },
+	  {
+		"name": "Account Management",
+		"item": [
+		  {
+			"name": "Create Account",
+			"request": {
+			  "method": "POST",
+			  "header": [],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n    \"username\": \"nuevo_usuario\",\n    \"email\": \"correo_modificado@example.com\",\n    \"password\": \"contrasena_modificada\",\n    \"roles\": [\"admin\"]\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:3000/api/accounts",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "3000",
+				"path": ["api", "accounts"]
+			  }
+			},
+			"response": []
+		  }
+		]
+	  },
+	  {
+		"name": "Inventory Management",
+		"item": [
+		  {
+			"name": "Add Inventory Item",
+			"request": {
+			  "method": "POST",
+			  "header": [],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n    \"name\": \"Producto Ejemplo\",\n    \"description\": \"Descripción del producto modificado\",\n    \"price\": 100,\n    \"category\": \"603dcd6e893b402b5c4e7c8b\"\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:3000/api/inventory",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "3000",
+				"path": ["api", "inventory"]
+			  }
+			},
+			"response": []
+		  }
+		]
+	  },
+	  {
+		"name": "Purchase Orders",
+		"item": [
+		  {
+			"name": "Create Purchase Order",
+			"request": {
+			  "method": "POST",
+			  "header": [],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n    \"items\": [{ \"product\": \"603dcd6e893b402b5c4e7c8b\", \"quantity\": 2 }],\n    \"total\": 200,\n    \"user\": \"603dcd6e893b402b5c4e7c8a\",\n    \"status\": \"Pending\"\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:3000/api/purchase-orders",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "3000",
+				"path": ["api", "purchase-orders"]
+			  }
+			},
+			"response": []
+		  }
+		]
+	  }
+	]
+  }
